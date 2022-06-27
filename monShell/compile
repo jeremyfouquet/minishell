@@ -1,0 +1,4 @@
+#! /usr/bin/env tcsh
+gcc -g -Wall *.c
+if ($? != 0) exit
+echo executable ok
