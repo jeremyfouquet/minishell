@@ -1,8 +1,9 @@
+/*
+    cl−monsystem.c
+    Une re−implementation de la fonction system
+*/
 # include "sys.h"
 
-/* cl−monsystem.c
-Une re−implementation de la fonction system
-*/
 int monsystem(char * command){
     int pid, x, etat ;
     pid = fork() ;

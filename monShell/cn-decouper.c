@@ -7,6 +7,7 @@
 /* decouper −− decouper une chaine en mots */
 int decouper(char * ligne, char * separ, char * mot[], int maxmot){
     int i ;
+
     mot[0] = strtok( ligne, separ);
     for( i = 1; mot[i - 1] != 0; i ++){
         if ( i == maxmot){

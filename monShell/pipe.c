@@ -1,10 +1,7 @@
-/*******************************************************
-# Nom ......... : pipe
-# Rôle ........ : creation d'un pipe et execution des arguments de gauche et de droite
-# Auteur ...... : jeremy fouquet
-# Version ..... : V1 du 05/05/2022
-# Licence ..... : réalisé dans le cadre du cours de L2 de Philippe Kislin
-********************************************************/
+/*
+    pipe.c
+    Creation d'un pipe et execution des arguments de gauche et de droite
+*/
 
 # include "sys.h"
 

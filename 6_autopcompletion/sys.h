@@ -8,5 +8,3 @@
 # include <sys/wait.h>
 # include <string.h>
 # include <dirent.h>
-# include <termios.h>  //termios, TCSANOW, ECHO, ICANON
-# include <unistd.h>   //STDIN_FILENO
