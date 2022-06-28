@@ -13,7 +13,7 @@ int autocompletion(char * ligne) {
     strcpy(ligne, "");
     char c;
     do {
-        system("/bin/stty raw"); // https://stackoverflow.com/questions/1798511/how-to-avoid-pressing-enter-with-getchar-for-reading-a-single-character-only
+        system("/bin/stty raw"); // source : https://stackoverflow.com/questions/1798511/how-to-avoid-pressing-enter-with-getchar-for-reading-a-single-character-only
         c = getchar();
         if(c == 9){ // si appuis sur la touche tabulation
             system("/bin/stty cooked");

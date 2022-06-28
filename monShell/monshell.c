@@ -4,8 +4,7 @@
 # Auteur ...... : jeremy fouquet
 # Version ..... : 27/06/2022
 # Licence ..... : réalisé dans le cadre du cours de L2 de Philippe Kislin
-# Compilation : make
-# Usage : ./monshell
+# Compilation et Usage : make && ./monShell
 ********************************************************/
 
 # include "sys.h"
@@ -35,7 +34,7 @@ int main(int argc, char * argv[]) {
    decouper(strdup(getenv("PATH")), ":", dirs, MaxDirs);
 
    /* Lire et traiter chaque ligne de commande */
-   for(printf (PROMPT); autocompletion(ligne) > 0; printf (PROMPT)){
+   for(printf (PROMPT); autocompletion(ligne) >= 0; printf (PROMPT)){
        decouper(ligne, " \t\n", mot, MaxMot);
        int ac = compte(mot);
        if (mot[0] == 0) // ligne vide
@@ -52,17 +51,14 @@ int main(int argc, char * argv[]) {
            monexec(mot, tmp, ac);
            continue;
        }
-
-       // enfant : exec du programme
        for( i = 0; dirs [ i ] != 0; i ++){
            snprintf(pathname, sizeof pathname, "%s/%s", dirs[i], mot[0]);
            monexec(mot, tmp, ac);
-           execv(pathname, mot);
+           execvp(pathname, mot);
        }
        fprintf ( stderr, "%s: not found\n", mot[0]);
        exit(1) ;
    }
-
    printf ("Bye\n");
    return 0;
 }

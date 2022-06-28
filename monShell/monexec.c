@@ -14,14 +14,16 @@ int chevronplacement(char *[], char *[]);
 int dernierpipe(char *[]);
 int monpipe(char * mot[], int lstpipe);
 
+int manuel(void);
+
 // source : https://askcodez.com/comment-comparer-pointeur-de-chaines-de-caracteres-en-c.html
 int monexec(char * mot1[], int execution, int ac){
-    char * commandes[6] = {"exit", "cd"};
+    char * commandes[3] = {"exit", "cd", "MAN"};
     char * chevrons[4] = {">", ">>", "<", "<<"};
     int placement = chevronplacement(mot1, chevrons);
     int lstpipe = dernierpipe(mot1);
     const char * str1 = * mot1;
-    for(int i = 0; commandes[i] != NULL && i < 2; i++) {
+    for(int i = 0; commandes[i] != NULL && i < 3; i++) {
         const char * str2 = commandes[i];
         if(execution != 0) { // Si c'est le parent
             if (strcmp(str1, str2) == 0) { // compare 2 chaines de caracteres et renvoie 0 si elles sont identiques
@@ -31,15 +33,20 @@ int monexec(char * mot1[], int execution, int ac){
                         exit(0);
                     case 1: // moncd
                         moncd(ac, mot1);
+                    case 2: // moncd
+                        manuel();
                 }
             }
         } else { // Si c'est l'enfant
-            if (strcmp(str1, str2) == 0) // compare 2 chaines de caracteres et renvoie 0 si elles sont identiques
+            if (strcmp(str1, str2) == 0) {// compare 2 chaines de caracteres et renvoie 0 si elles sont identiques
                 exit(0);
-            else if (placement != -1)
+            }
+            else if (placement != -1) {
                 redirection(ac, mot1, placement, chevrons);
-            else if (lstpipe != -1)
+            }
+            else if (lstpipe != -1) {
                 monpipe(mot1, lstpipe);
+            }
         }
    }
    return 1;
@@ -68,4 +75,24 @@ int dernierpipe(char * mot[]) {
         }
     }
     return placement;
+}
+int manuel(void) {
+    FILE *fp;
+    char *line = NULL;
+    size_t len = 0;
+    ssize_t read;
+    fp = fopen("./README.md", "r");
+    if (fp == NULL)
+        return 1;
+    while ((read = getline(&line, &len, fp)) != -1) {
+        // printf("Retrieved line of length %zu :\n", read);
+        printf("%s", line);
+    }
+    printf("\n");
+    if (ferror(fp)) {
+        /* handle error */
+    }
+    free(line);
+    fclose(fp);
+    return 0;
 }

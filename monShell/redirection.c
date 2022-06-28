@@ -35,7 +35,7 @@ int redirection(int ac, char * mot[], int placement, char * chevrons[]) {
                 }
                 fclose(fp);
             } else if (strcmp(mot[i], chevrons[3]) == 0) {
-                // A faire fonctionnement du chevron "<<"
+                // A faire ; Fonctionnement du chevron "<<"
             }
         }
     } else {
