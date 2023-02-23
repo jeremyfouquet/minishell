@@ -2,21 +2,16 @@
 # DOCUMENTATION DU PROGRAMME
 
 ## CONFIGURATION
-### compilation
+### compilation et execution
     ```
     make
     ```
-### execution
-    ```
-    ./minishell
-    ```
-### mise à jour
-    ```
-    make all
-    ```
-### supprimer les executables
+### supprimer les fichiers objets
     ```
     make clean
+    ```
+### supprimer les fichiers objets et l'executable
+    ```
     make cleanall
     ```
 ## DESCRIPTION
