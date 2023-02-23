@@ -1,5 +1,5 @@
 C=gcc
-EXEC=monshell
+EXEC=minishell
 LDFLAGS=
 CXXFLAGS= -Wall
 SRC= monshell.c cn-decouper.c cl-monsystem.c moncd.c monexec.c redirection.c monpipe.c pipe.c autocompletion.c
