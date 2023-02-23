@@ -4,7 +4,7 @@
 # Auteur ...... : jeremy fouquet
 # Version ..... : 27/06/2022
 # Licence ..... : réalisé dans le cadre du cours de L2 de Philippe Kislin
-# Compilation : gcc -Wall *.c -o
+# Compilation : gcc -Wall *.c
 # Usage : ./a.out
 ********************************************************/
 
