@@ -7,6 +7,7 @@ SRC= monshell.c cn-decouper.c cl-monsystem.c moncd.c monexec.c redirection.c mon
 OBJ=$(SRC:.c=.o)
 
 all: $(EXEC)
+	./$(EXEC)
 
 $(EXEC): $(OBJ)
 	$(C) -o $@ $^ $(LDFLAGS)
