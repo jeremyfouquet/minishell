@@ -61,6 +61,12 @@
     Exemple d'utilisation :
         <debut du nom du fichier> + touche tab
     ```
+### manuel
+    ```
+    Permet d'afficher le README faisant office de manuel d'usage du minishell
+    utilisation :
+        MAN
+    ```
 ## BUGS (BOGUES)
     ```
     Certaines commandes ne sont pas fonctionnelles :
