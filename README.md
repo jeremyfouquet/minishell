@@ -2,7 +2,7 @@
 
 ## Structure et déscription
 
-Le minishell est construit à partir de 4 première réalisation afin de mettre en places les commandes de celui-ci au fur et à mesure :
+Le minishell est construit à partir de 4 premières réalisations mettant en places le shell et les commandes de celui-ci étape par étape :
 
 1. Shell élémentaire
 
