@@ -13,7 +13,7 @@ Le minishell est construit à partir de 4 première réalisation afin de mettre 
 4. L'autocomplétion
 
 5. minishell avec un makefile et l'ensemble des commandes suivantes :
-  *exit
+   * exit
   * cd
   * redirections
   * pipes
