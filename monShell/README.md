@@ -10,7 +10,7 @@
     ```
     ./minishell
     ```
-### mise à jour et lancement
+### mise à jour
     ```
     make all
     ```
