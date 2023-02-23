@@ -2,26 +2,27 @@
 # DOCUMENTATION DU PROGRAMME
 
 ## CONFIGURATION
-### compilation et lancement
+### compilation
     ```
-    make && ./minishell
+    make
+    ```
+### execution
+    ```
+    ./minishell
     ```
 ### mise à jour et lancement
     ```
-    make all && ./miniShell
+    make all
     ```
-
 ### supprimer les executables
     ```
     make clean
     make cleanall
     ```
-
 ## DESCRIPTION
     ```
     shell élémentaire qui prend en capacité les fonctions cd et exit, les redirections d'entrées-sorties, les pipes ainsi que l'auto-complétion des noms de fichiers
     ```
-
 ## COMMANDES
 ### Exit
     ```
@@ -60,12 +61,10 @@
     Exemple d'utilisation :
         <debut du nom du fichier> + touche tab
     ```
-
 ## NOTES
     ```
     Projet réalisé dans le cadre du cours de L2 Systeme d'Exploitation de Philippe Kislin
     ```
-
 ## BUGS (BOGUES)
     ```
     Certaines commandes ne sont pas fonctionnelles :
@@ -74,7 +73,6 @@
         le chevron de redirection '<<'
         les procedures d'arrière plan avec '&'
     ```
-
 ## AUTHOR (AUTEUR)
     ```
     jeremy fouquet
