@@ -61,10 +61,6 @@
     Exemple d'utilisation :
         <debut du nom du fichier> + touche tab
     ```
-## NOTES
-    ```
-    Projet réalisé dans le cadre du cours de L2 Systeme d'Exploitation de Philippe Kislin
-    ```
 ## BUGS (BOGUES)
     ```
     Certaines commandes ne sont pas fonctionnelles :
@@ -72,6 +68,10 @@
         ctrl + ...
         le chevron de redirection '<<'
         les procedures d'arrière plan avec '&'
+    ```
+## NOTES
+    ```
+    Projet réalisé dans le cadre du cours de Systeme d'Exploitation de Philippe Kislin de la Licence Informatique de l'Université Paris 8.
     ```
 ## AUTHOR (AUTEUR)
     ```
